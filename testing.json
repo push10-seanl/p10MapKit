@@ -1,0 +1,93 @@
+[
+  {
+    "name": "Collegiate Chapter 1",
+    "type": "collegiate",
+    "school_name": "school 1",
+    "city": "city 1",
+    "state": "Alabama",
+    "website": "https://google.com",
+    "facebook": "https://www.facebook.com/",
+    "instagram": "https://www.instagram.com/",
+    "coords": {
+      "lat": 32.3182314,
+      "lng": -86.902298
+    },
+    "zipcode": "36104"
+  },
+  {
+    "name": "Collegiate Chapter adfaefgea",
+    "type": "collegiate",
+    "school_name": "school 1",
+    "city": "Huntsville",
+    "state": "Alabama",
+    "website": "https://google.com",
+    "facebook": "https://www.facebook.com/",
+    "instagram": "https://www.instagram.com/",
+    "coords": {
+      "lat": 34.7303688,
+      "lng": -86.5861037
+    },
+    "zipcode": "35801"
+  },
+  {
+    "name": "Alumnae Chapter 1 ",
+    "type": "alumnae",
+    "school_name": "school 1",
+    "city": "Hackensack",
+    "state": "New Jersey",
+    "website": "https://google.com",
+    "facebook": "https://www.facebook.com/",
+    "instagram": "https://www.instagram.com/",
+    "coords": {
+      "lat": 40.8859325,
+      "lng": -74.0434736
+    },
+    "zipcode": "07601"
+  },
+
+  {
+    "name": "Collegiate Chapter 2",
+    "type": "collegiate",
+    "school_name": "school 2",
+    "city": "Philadelphia",
+    "state": "Pennsylvania",
+    "website": "https://google.com",
+    "facebook": "https://www.facebook.com/",
+    "instagram": "https://www.instagram.com/",
+    "coords": {
+      "lat": 39.9525839,
+      "lng": -75.1652215
+    },
+    "zipcode": "19102"
+  },
+  {
+    "name": "Chapter 4",
+    "type": "alumnae",
+    "school_name": "school 4",
+    "city": "Austin",
+    "state": "Texas",
+    "website": "https://google.com",
+    "facebook": "https://www.facebook.com/",
+    "instagram": "https://www.instagram.com/",
+    "coords": {
+      "lat": 30.267153,
+      "lng": -97.7430608
+    },
+    "zipcode": "78701"
+  },
+  {
+    "name": "Chapter 5",
+    "type": "collegiate",
+    "school_name": "school 5",
+    "city": "Los Angeles",
+    "state": "California",
+    "website": "https://google.com",
+    "facebook": "https://www.facebook.com/",
+    "instagram": "https://www.instagram.com/",
+    "coords": {
+      "lat": 34.0522342,
+      "lng": -118.2436849
+    },
+    "zipcode": "90001"
+  }
+]
