@@ -4,6 +4,32 @@ A refactored, more generalized version of the initial map kit repo.
 
 Currently, this is set up specifically for a project which is intending to read all data from a generated JSON file. However, I have written this in a way where it could be easily adapted to ALM, facetWP, or a custom AJAX request.
 
+## enqueue
+
+the wp_localize_script is specific to our niche case of using a JSON file as the source of data. This is required to pass the uploads directory url to javascript. If you are doing a more traditional ALM/facetWP/custom Ajax approach, you can skip that step and just enqueue the script module.
+
+```
+wp_enqueue_script_module('@p10/map-kit-refactor', get_template_directory_uri() . '/p10MapKit/controller.js', array(), filemtime(get_template_directory() . '/p10MapKit/controller.js'));
+
+// Get the uploads directory information
+// Get the uploads directory information
+$uploads = wp_upload_dir();
+
+// Output the uploads data as a global variable
+echo '<script type="text/javascript">';
+echo 'const wpUploads = ' . json_encode(array(
+    'baseurl' => $uploads['baseurl'], // URL to the uploads folder
+    'basedir' => $uploads['basedir'], // Path to the uploads folder
+)) . ';';
+echo '</script>';
+
+// Pass the uploads URL to the JavaScript file
+wp_localize_script('@p10/map-kit-refactor', 'wpUploads', array(
+    'baseurl' => $uploads['baseurl'], // URL to the uploads folder
+    'basedir' => $uploads['basedir'], // Path to the uploads folder
+));
+```
+
 ## controller.js
 
 this is the entry point of this application. It expects access to a mapbox access token, and a mapbox map style url.
