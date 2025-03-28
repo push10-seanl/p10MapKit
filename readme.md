@@ -32,7 +32,7 @@ This function utilizes the zipCodeGeocode.js function and the radiusSearch.js fu
 
 Realistically, most of the time map results will probably be coming from a different source (likely custom post types).
 
-TODO: Set up alternative function that will work when results are returned via ALM or facetWP. This might take the form of a MutationObserver that watches the results div, and runs subsequent functions when new results are loaded.
+**TODO: Set up alternative function that will work when results are returned via ALM or facetWP. This might take the form of a MutationObserver that watches the results div, and runs subsequent functions when new results are loaded.**
 
 ## generateResults.js
 
@@ -42,7 +42,7 @@ The array is used to generate the actual HTML elements of list results, as well 
 
 This function also initializes the markerController.js function, which handles click events on results listings and markers.
 
-TODO: if you are returning data from ALM or facetWP, etc, make the array of results optional. Instead of generating the list of results, skip this step and just generate map markers from the results loaded on the page
+**TODO: if you are returning data from ALM or facetWP, etc, make the array of results optional. Instead of generating the list of result elements, skip this step and just generate map markers from the results loaded on the page**
 
 ## searchfilter() and selectFilter() functions
 
