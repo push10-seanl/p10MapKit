@@ -48,7 +48,7 @@ TODO: if you are returning data from ALM or facetWP, etc, make the array of resu
 
 These two functions handle changes to the select dropdown and the search text input. On submit, they take these values and re-run fetchMarkers.js and generateResults.js with the updated filters.
 
-### Helper functions
+## Helper functions
 
 #### zipCodeGeocode.js
 
@@ -68,6 +68,6 @@ this is an untested PHP version of the radiusSearch function. This would be used
 
 ## UML Diagram
 
-I haven't made one of these since college and completely forget the actual rules, but I tried to model this application to provide an easy to understand diagram.
+I haven't made one of these since college and completely forget the actual rules, but I tried to model this application to provide an easier way to understand the flow of data or whatever
 
 ![UML Diagram](uml.png)
