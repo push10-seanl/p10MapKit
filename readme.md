@@ -54,7 +54,7 @@ this fetchMarkers takes a URL, as well as an object of search filters as argumen
 
 The purpose of this function is to fetch results from a url, then filter the JSON object against whatever filters are set (search input, or dropdown). This then returns the filtered results as a JSON object.
 
-The JSON object format can be found in testing.js. The rest of the code expects each object to have the properties included in these test objects.
+The JSON object format can be found in testing.json. The rest of the code expects each object to have the properties included in these test objects.
 
 This function utilizes the zipCodeGeocode.js function and the radiusSearch.js function, which are described below, under the 'helper functions' section.
 
