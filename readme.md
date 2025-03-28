@@ -46,7 +46,7 @@ TODO: if you are returning data from ALM or facetWP, etc, make the array of resu
 
 ## searchfilter() and selectFilter() functions
 
-These two functions handle changes to the select dropdown and the search text input. On submit, they take these values and re-run fetchMarkers.js and generateResults.js with the updated filters.
+These two functions handle changes to the select dropdown and the search text input. On submit, they take these values and re-run fetchMarkers.js and generateResults.js with the updated filters. This should probably be moved into their own separate files for readability.
 
 ## Helper functions
 
