@@ -2,7 +2,7 @@
 
 A refactored, more generalized version of the initial map kit repo.
 
-Currently, this is set up specifically for a project which is intending to read all data from a generated JSON file. However, I have written this in a way where it could be easily adapted to ALM, facetWP, or a custom AJAX request.
+This was initially set up specifically for a project which is intending to read all data from a generated JSON file. For that reason, there is a variable in controller.js, `let resultType = "ajax";` that will determine how the rest of the program functions. For alm/facetWP/custom ajax, this variable should be left as resultType = ajax. I will update this readme further as I complete this integration.
 
 ## enqueue
 
@@ -58,9 +58,7 @@ The JSON object format can be found in testing.json. The rest of the code expect
 
 This function utilizes the zipCodeGeocode.js function and the radiusSearch.js function, which are described below, under the 'helper functions' section.
 
-Realistically, most of the time map results will probably be coming from a different source (likely custom post types).
-
-**TODO: Set up alternative function that will work when results are returned via ALM or facetWP. This might take the form of a MutationObserver that watches the results div, and runs subsequent functions when new results are loaded.**
+In the case of an ajax integration, this function is skipped when the resultType variable is set to "ajax" as mentioned at the start of this readme.
 
 ## generateResults.js
 
@@ -69,8 +67,6 @@ This function takes the map instance, as well as an array of results returned fr
 The array is used to generate the actual HTML elements of list results, as well as the mapbox map markers.
 
 This function also initializes the markerController.js function, which handles click events on results listings and markers.
-
-**TODO: if you are returning data from ALM or facetWP, etc, make the array of results optional. Instead of generating the list of result elements, skip this step and just generate map markers from the results loaded on the page**
 
 ## searchfilter() and selectFilter() functions
 
