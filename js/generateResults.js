@@ -3,14 +3,23 @@ import { initializeMarkerController } from "./markerController.js";
 //TODO: complete updating for map markers,  add initializeMarkerController
 
 //generate map markers from JSON object containing all results
-export function generateResults(map, results = [], mapMarkers = []) {
+export function generateResults(
+  map,
+  results = [],
+  mapMarkers = [],
+  resultType
+) {
   if (!map || !map.getCanvasContainer) {
     console.error("Map instance is not valid.");
     return;
   }
+
   let mapResults = document.getElementById("map-results-list");
-  //reset results
-  mapResults.innerHTML = "";
+  //if using ajax, do not clear results
+  if (resultType != "ajax") {
+    //reset results
+    mapResults.innerHTML = "";
+  }
   let markers = document.querySelectorAll(".map-marker");
   mapMarkers.forEach((marker) => {
     marker.remove();
