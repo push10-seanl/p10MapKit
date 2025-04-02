@@ -2,6 +2,8 @@
 
 A refactored, more generalized version of the initial map kit repo.
 
+A working (not really styled) example of this can be found at https://dev-map-kit.pantheonsite.io/map-kit (currently this page is showing the alm integration).
+
 This was initially set up specifically for a project which is intending to read all data from a generated JSON file. For that reason, there is a variable in controller.js, `let resultType = "ajax";` that will determine how the rest of the program functions. For alm/facetWP/custom ajax, this variable should be left as resultType = ajax. I will update this readme further as I complete this integration.
 
 ## enqueue
@@ -59,6 +61,8 @@ The JSON object format can be found in testing.json. The rest of the code expect
 This function utilizes the zipCodeGeocode.js function and the radiusSearch.js function, which are described below, under the 'helper functions' section.
 
 In the case of an ajax integration, this function is skipped when the resultType variable is set to "ajax" as mentioned at the start of this readme.
+
+**if using ALM, include alm_query_args.php in your functions.php. This file hooks into the alm query and runs the radius search when the search text box value is numeric. This could use further refinement to ensure the numeric value is a zipcode before running the rest of the query modificaiton. This also REQUIRES that your post type has lat and lng saved separately in their own acf fields. the save_post wordpress hook can be used to extract this from a google maps or mapbox field, and save these values automatically to individual fields.**
 
 ## generateResults.js
 
