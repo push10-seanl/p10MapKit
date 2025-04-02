@@ -64,6 +64,8 @@ In the case of an ajax integration, this function is skipped when the resultType
 
 **if using ALM, include alm_query_args.php in your functions.php. This file hooks into the alm query and runs the radius search when the search text box value is numeric. This could use further refinement to ensure the numeric value is a zipcode before running the rest of the query modificaiton. This also REQUIRES that your post type has lat and lng saved separately in their own acf fields. the save_post wordpress hook can be used to extract this from a google maps or mapbox field, and save these values automatically to individual fields.**
 
+I have to admit here that I vibe-coded pretty much all of alm_query_args with copilot, but I will re-check it before this gets used on a live site.
+
 ## generateResults.js
 
 This function takes the map instance, as well as an array of results returned from fetchMarkers as arguments.
